@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+    function loop(){
+     for (var i = 0; i <= 100; i++){
+         document.write(i + " ");
+         if (i == 99){
+             alert("da hoan thanh ");
+             break;
+         }
+     }
+    }
+
+    function nhiet_do(){
+        var nhiet_do = parseInt(prompt("nhap vao nhiet do: "));
+        if (nhiet_do > 100){
+            alert("ban nen giam nhiet do: ");
+        }else if(nhiet_do < 20){
+            alert("ban nen tang nhiet do: ");
+        }
+    }
+
+    function total_Number(){
+        var number = parseInt(prompt("nhap so: "));
+        var sum = 0;
+        for (var i = 0; i < (number * 7); i++){
+            if(i % 7 == 0){
+                sum += i;
+            }else{
+                continue;
+            }
+        }
+        alert(sum);
+    }
+
+    function outPut_1to_100(){
+        for (var i = 1; i <= 100; i++){
+            if(i % 3 == 0 && i % 5 != 0){
+                document.write(i + ": " + "fizz" + "<br/>");
+            }else if(i % 5 == 0 && i % 3 != 0){
+                document.write(i + ": " + "buzz" + "<br/>");
+            }else if(i % 3 == 0 && i % 5 == 0){
+                document.write(i + ": " + "fizzbuzz" + "<br/>");  
+            }
+        }
+    }
+
+    outPut_1to_100();
+    total_Number();
+    nhiet_do();
+    loop();
+</script>
+</html>
