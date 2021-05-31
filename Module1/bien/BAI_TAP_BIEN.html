@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function DIEMTRUNGBINH() {
+        let diem_Hoa = Number(prompt("nhap vao diem hoa"));
+        let diem_ly = Number(prompt("nhap vao diem ly"));
+        let diem_sinh = Number(prompt("nhap vao diem sinh"));
+        let diem_tb = (diem_Hoa + diem_ly + diem_sinh) / 3;
+        alert("diem trung binh la: " + diem_tb);
+    }
+    function TINHDOC(){
+        let do_c = Number(prompt("nhap vao do c "));
+        let result = ( (9 * do_c) / 5 ) + 32;
+        aler("do f la " + result);
+    }
+    function CHUVIVADIENTICH(){
+        const  pi = 3.14;
+        let r = Number(prompt("nhap vao ban kinh"));
+        let dien_tich = p * ( r ** 2);
+        let chu_vi = 2 * pi * r;
+        alert("dien tich hinh tron la " + dien_tich);
+        alert("chu vi hinh tron la " + chu_vi);
+    }
+    DIEMTRUNGBINH();
+    TINHDOC();
+    CHUVIVADIENTICH();
+</script>
+</body>
+</html>
