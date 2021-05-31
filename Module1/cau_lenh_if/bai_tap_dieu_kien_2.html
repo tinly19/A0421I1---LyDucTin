@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function dien_tich_hinh_vuong(){
+        let a = parseInt(prompt("nhap vao 1 canh: "));
+        let s = a * a;
+        document.write("dien tich hinh vuong la: " + s);
+    }
+
+    function dien_tich_hinh_chu_nhat(){
+        let a =  parseInt(prompt("nhap vao canh dai: "));
+        let b =  parseInt(prompt("nhap vao canh rong: "));
+        let s = a * b;
+        document.write("dien tich hinh chu nhat la; " + s);
+    }
+
+    function tinh_s_tam_giac_vuong(){
+        let a =  parseInt(prompt("nhap vao canh a: "));
+        let b =  parseInt(prompt("nhap vao canh b: "));
+        let s =  1/2 * a * b;
+        document.write("dien tich tam giac vuong la: " + s);
+    }
+
+    function kiem_tra_tuoi(){
+        let age = parseInt(prompt("nhap tuoi ban vao day"));
+        if (age < 120 && age > 0){
+            if(typeof age == "number"){
+                document.write("tuoi cua ban hop le")
+            }
+        }
+    }
+
+    function kiem_tra_tam_giac(){
+        let a =  parseInt(prompt("nhap vao canh a: "));
+        let b =  parseInt(prompt("nhap vao canh b: "));
+        let c =  parseInt(prompt("nhap vao canh c: "));
+        if ( a > 0 && b > 0 && c > 0){
+            if ( a + b > c){
+                document.write("day la mot tam giac");
+            }else if(b + c > a){
+                document.write("day la mot tam giac");
+            }else if(a + c > b){
+                document.write("day la mot tam giac");
+            }
+        }
+    }
+
+    dien_tich_hinh_vuong();
+    dien_tich_hinh_chu_nhat();
+    tinh_s_tam_giac_vuong();
+    kiem_tra_tuoi();
+    kiem_tra_tam_giac();
+</script>
+</body>
+</html>

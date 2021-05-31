@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiem_tra_hai_so () {
+        var a = parseInt(prompt("nhap vao so a: "));
+        var b = parseInt(prompt("nhap vao so b: "));
+        if (a % b == 0){
+            document.write("a chia het cho b");
+        }else{
+            document.write("a khong chia het cho b");
+        }
+    }
+
+    function kiem_tra_do_tuoi () {
+        let age = parseInt(prompt("nhap tuoi cua ban vao day: "));
+        if (age >= 15){
+            document.write("ban da du tuoi vao lop 10");
+        }else{
+            document.write("ban khong du tuoi vao lop 10");
+        }
+    }
+
+    function kiem_tra_so(){
+        let number = parseInt(prompt("nhap so muon kiem tra vao: "));
+        if (number > 0){
+            document.write("so ban nhap lon hon 0");
+        }else if(number = 0){
+            document.write("so ban nhap bang 0");
+        }else{
+            document.write("so ban nhap nho hon 0");
+        }
+    }
+
+    function  tim_so_lon_nhat(){
+        let a = parseInt(prompt("nhap vao so a: "));
+        let b = parseInt(prompt("nhap vao so b: "));
+        let c = parseInt(prompt("nhap vao so c: "));
+        if (a > b){
+            if (a > c){
+                document.write("a la so lon nhat");
+            }else{
+                document.write("c la so lon nhat");
+            }
+        }else{
+            if (b > c){
+                document.write("b la so lon nhat");
+            }else{
+                document.write("c la so lon nhat");
+            }
+        }
+    }
+
+    function xep_hang_hoc_luc(){
+        let point = parseInt(prompt("nhap vao so diem: "));
+        if (point >= 8){
+            document.write("ban duoc hoc sinh gioi");
+        }else if (point >= 6.5){
+            document.write("ban duoc hoc simh kha");
+        }else{
+            document.write("ban duoc hoc sinh trung binh");
+        }
+    }
+
+    function tinh_gia_cuoc_dien_thoai(){
+     let a = parseInt(prompt("nhap vao cuoc ban su dung: "));
+     switch(a){
+         case "V22" :
+             document.write("22 000");
+             break;
+         case "V39" :
+             document.write("39 000");
+             break;
+         case "V59" :
+             document.write("59 000");
+             break;
+         default :
+             document.write("ban nhap sai goi cuoc");
+             break;
+     }
+    }
+
+    tinh_gia_cuoc_dien_thoai();
+    kiem_tra_hai_so();
+    kiem_tra_do_tuoi();
+    kiem_tra_so();
+    tim_so_lon_nhat();
+    xep_hang_hoc_luc();
+</script>
+</body>
+</html>
