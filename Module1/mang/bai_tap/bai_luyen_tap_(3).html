@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sort_tang_dan() {
+        let array = [];
+        let elements = parseInt(prompt("nhập vào số phần tử:"));
+        if (elements <= 10) {
+            for (i = 0; i < elements; i++) {
+                array[i] = prompt("nhập vào phần tử thử" + i);
+            }
+            document.write(array + "<br/>");
+        }
+        for (j = 0; j < array.length - 1; j++) {
+            for (a = j + 1; a < array.length; a--) {
+                if (array[j] < array[a]) {
+                    let temp = array[j];
+                    array[j] = array[a];
+                    array[a] = temp;
+                }
+            }
+        }
+        document.write(array);
+    }
+
+    function noi_mang(){
+        let array_1 = [];
+        let array_2 = [];
+        let a = parseInt(prompt("nhap so luong phan tu mang 1: "));
+        let b = parseInt(prompt("nhap so luong phan tu mang 2: "));
+        for(i = 0; i < a; i++){
+            array_1[i] = prompt("phần tử index thu" + i);
+        }
+        for(j = 0; j < b;j++){
+            array_2[j] =  prompt("phần tử index thu" + j);
+        }
+        let array_3 = array_1.concat(array_2);
+        document.write(array_3);
+    }
+
+    noi_mang();
+    sort_tang_dan();
+</script>
+</body>
+</html>

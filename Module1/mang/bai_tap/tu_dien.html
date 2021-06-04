@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+  <label>
+    <input type="text" id="tu_ngu">
+    <button type="submit" onclick="tu_dien">tra cứu</button>
+  </label>
+  <p id="result">kết quả là: </p>
+</form>
+<script>
+function tu_dien(){
+    let str = prompt("nhập vào từ muốn biết: ");
+    let english = ['hello','goodbye','sorry'];
+    let viet_Nam = ['xin chào','tạm biệt','xin lỗi'];
+    for (i = 0; i < english.length;i++){
+        if (str == english[i]){
+            alert(viet_Nam[i]);
+            break;
+        }else{
+            alert("không có từ bạn tìm kiếm ");
+        }
+    }
+}
+
+tu_dien();
+
+</script>
+</body>
+</html>

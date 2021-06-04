@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tim_element(){
+      let array = [];
+      let number = parseInt(prompt("nhâp vào số lượng phần tử: "));
+      let flag = false;
+      for (i = 0; i < number; i++){
+          array[i] = parseInt(prompt(i));
+      }
+      document.write(array);
+      for(j = 0;j < array.length - 1; j++){
+          if (array[j] == 5){
+              alert(" V is in the array ");
+              flag = false;
+              break;
+          }
+      }
+      if(flag){
+          alert("V is not in the array");
+      }
+    }
+    tim_element();
+</script>
+</body>
+</html>

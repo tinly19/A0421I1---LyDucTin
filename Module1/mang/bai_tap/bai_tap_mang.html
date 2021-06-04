@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function mangHaiChieu () {
+    let a = [
+      [1, 2, 1, 24],
+      [8, 11, 9, 4],
+      [7, 0, 7, 27],
+      [7, 4, 28, 14],
+      [3, 10, 26, 7]
+    ];
+    for (var i in a) {
+      console.log("row " + i);
+      for (var j in a[i]) {
+        console.log(" " + a[i][j]);
+      }
+    }
+  }
+
+  function daoNguocMangVaDemSo(){
+    var mang = [];
+    var elements = parseInt(prompt("nhập vào số phần tử"));
+    var count = 0;
+    for (var i = 0; i < elements; i++){
+      mang[i] = prompt("phần tử thứ: " + (i + 1));
+    }
+    for (var j = 0; j < mang.length; j++){
+      if(mang[j] != ""){
+        count++;
+      }
+    }
+    document.write(mang + "<br/>");
+    document.write(mang.reverse() + "<br/>");
+    document.write("hàm có " + count + " phần tử " + "<br/>");
+  }
+
+  function kiemTra2Chuoi (){
+    let a = prompt("nhap vao chuoi 1");
+    let b = prompt("nhap vao chuoi 2");
+    let array1 = a.split("");
+    let array2 = b.split("");
+    let count = 0;
+    for (var i = 0; i < array1.length; i++) {
+      for (var j = 0; j < array2.length; j++) {
+          if(array1[i] == array2[j]) {
+              count++;
+          }
+      }
+    }
+    if (count == array1.length){
+        document.write("đây là hai chuỗi giống nhau" + "<br/>");
+    }else{
+        document.write("đây là hai chuỗi khác nhau" + "<br/>");
+    }
+    for (var k = 0; k < array1.length; k++){
+        if (array1[k] == "-"){
+            array1[k] = "_";
+        }
+    }
+    let chuoi = array1.toString();
+    document.write(chuoi + "<br/>");
+    document.write(array1.length + " phan tu" + "<br/>");
+  }
+
+  daoNguocMangVaDemSo();
+  kiemTra2Chuoi();
+  mangHaiChieu();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function minArray(arr1){
+    let min = arr1[0];
+    if(arr1.length == 0) {
+      return -1;
+    }else {
+      for (var i = 1; i < arr1.length; i++) {
+        if (arr1[i] < min) {
+          min = arr1[i];
+        }
+      }
+      return min;
+    }
+  }
+  let arr1 = [3, 5, 1, 8, -3, 7, 8];
+  let min = minArray(arr1);
+  alert(min);
+</script>
+</body>
+</html>

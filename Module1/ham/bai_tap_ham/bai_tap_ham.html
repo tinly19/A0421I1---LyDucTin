@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function kiem_tra_so_nguyen_to() {
+    let soCanKiemTra = parseInt(prompt("nhập vào số bạn muốn kiểm tra: "));
+    isPrime(soCanKiemTra);
+
+    function isPrime(t) {
+      for (let i = 2; i <= Math.sqrt(t); i++) {
+        if (t % i == 0) {
+          alert(t + " không phải là số nguyên tố");
+          break;
+        } else {
+          alert(t + " là số nguyên tố");
+        }
+      }
+    }
+  }
+
+  function chuyen_doi(){
+    let a = parseFloat(prompt("nhập vào số mét: "));
+    let b = parseFloat(prompt("nhập vào số foot: "));
+    footToMeter(b);
+    meterToFoot(a);
+    function footToMeter(foot){
+     let meter = 0.305 * foot;
+      document.write(meter + "<br/>");
+    }
+    function meterToFoot(meter){
+     let foot = 3.279 * meter;
+      document.write(foot + "<br/>");
+    }
+  }
+
+  kiem_tra_so_nguyen_to();
+  chuyen_doi();
+</script>
+</body>
+</html>

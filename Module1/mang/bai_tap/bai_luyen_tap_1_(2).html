@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function find_element(){
+    let array = [];
+    let elements = parseInt(prompt("nhập số lượng phần tử: "));
+    let sum = 0;
+    for(i = 0; i < elements;i++){
+      array[i] = parseInt(prompt());
+    }
+    let max = array[0];
+    for(j = 0; j < array.length; j++){
+      if(max < array[j]){
+        max =array[j];
+      }
+      sum += array[j];
+    }
+    sum = sum / elements;
+    document.write(max + "<br/>");
+    document.write(sum);
+  }
+
+  function dao_nguoc_so(){
+    let array = [];
+    let elements = parseInt(prompt("nhập vào số phần tử: "));
+    for(i = 0; i < elements;i++){
+      array[i] = parseInt(prompt());
+    }
+    document.write(array + "<br/>");
+    let first = 0;
+    let last = array.length - 1;
+    while (first < last){
+      let temp = array[first];
+      array[first] = array[last];
+      array[last] = temp;
+      first++;
+      last--;
+    }
+    document.write(array);
+  }
+
+
+  dao_nguoc_so();
+  find_element();
+</script>
+</body>
+</html>

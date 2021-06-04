@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+   var limit_Number = parseInt(prompt("nhập vào giới hạn số: "));
+   function fibonacci(number){
+       if (number < 0) {
+           return -1;
+       } else if (number == 0 || number == 1) {
+           return number;
+       } else {
+           return fibonacci(number - 1) + fibonacci(number - 2);
+       }
+   }
+
+   for(var i = 2; i < (limit_Number + 2); i++){
+        var numer_Fibonacci = fibonacci(i);
+        document.write(numer_Fibonacci + " ");
+        }
+</script>
+</body>
+</html>
