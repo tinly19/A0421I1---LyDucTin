@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+function xinChao(){
+    alert("xin chào");
+  }
+
+function tangSoLen () {
+    function tangGiaTri(a) {
+      return ++a;
+    }
+    var a = 1
+    alert(tangGiaTri(a));
+  }
+
+function datHamAlert () {
+  function addNumbers() {
+    firstNum = 4;
+    secondNum = 8;
+    result = firstNum + secondNum;
+    return result;
+  }
+  result = 0;
+  alert(result);
+  result = addNumbers();
+  alert(result);
+}
+
+function baiNhanHaiThamSo () {
+    function handleTwoParam (a,b) {
+    if (a > b){
+      alert(a + " lớn hơn " + b);
+    }else{
+      return a + b;
+    }
+    }
+   var a = parseInt(prompt("nhập vào số đầu tiên: "));
+   var b = parseInt(prompt("nhập vào số thứ hai: "));
+   alert(handleTwoParam(a,b));
+}
+
+  baiNhanHaiThamSo();
+  datHamAlert();
+  tangSoLen();
+  xinChao();
+</script>
+</body>
+</html>

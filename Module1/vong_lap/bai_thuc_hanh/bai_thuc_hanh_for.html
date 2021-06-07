@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Loops</h2>
+<p id="demo"></p>
+<script>
+  function hienThiChuoiNLan (){
+    let text = "";
+    let i;
+    for (i = 0; i < 5; i++) {
+      text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+  }
+
+  function tinhTongTu1DenN () {
+    let num = prompt("Enter your number: ");
+    let total = 0;
+    let i = 1;
+    for (; i <= num; i +=1) {
+      total = total + i;
+    }
+    alert(total);
+  }
+
+  function baiThucHanhWhile(){
+    let num = prompt("Enter a number: ");
+    let total = 0;
+    while( num != -1 ) {
+      num = prompt("Enter a number: ");
+      alert(number);
+      total += num;
+    }
+  }
+  function inHinh () {
+    let i = 1;
+
+    while (i < 100) {
+      document.write("<hr width = " + i + "%>");
+      i++;
+    }
+  }
+
+  inHinh();
+  baiThucHanhWhile();
+  tinhTongTu1DenN();
+  hienThiChuoiNLan();
+</script>
+</body>
+</html>

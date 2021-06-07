@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+function tinhBinhPhuong () {
+    function nhanThamSo(a) {
+        return a ** 2;
+    }
+    var a = parseInt(prompt("nhạp vào số bạn muốn bình phương"));
+    alert(nhanThamSo(a));
+}
+
+function tinhDienTichVaChuVi () {
+    function tinhDienTich (r) {
+        result = pi * (r ** 2 );
+        return result;
+    }
+    function  tinChuVi (r) {
+        result = 2 * r * pi;
+        return result;
+    }
+    const pi = 3.14;
+    var result;
+    var r = parseFloat(prompt("nhập vào bán kính: "));
+    alert(tinChuVi(r));
+    alert(tinhDienTich(r));
+}
+
+function tinhGiaiThua () {
+    function giaiThua (number) {
+        for (var i = number; i > 0; i--){
+            a *= i;
+        }
+        return a;
+    }
+    var a = 1;
+    var number = parseInt(prompt("nhập số giai thừa bạn muốn tính "));
+    alert(giaiThua(number));
+}
+
+function kiemTraSo () {
+    function testNumber (number){
+        if (typeof number == 'number'){
+            alert("đây là kí tự số");
+        }else{
+            alert("đây không phải là kí tự số");
+        }
+    }
+    var number = parseInt(prompt("nhập vào kí tự bạn muốn kiểm tra"));
+    alert(testNumber(number));
+}
+
+function returnNumberMin () {
+    function numberMin (a,b,c) {
+        if (a < b){
+            if(a < c){
+                alert(a + " là số nhỏ nhất");
+            }else{
+                alert(c + " là số nhỏ nhất");
+            }
+        }else{
+            if(b < c){
+                alert(b + " là số nhỏ nhất");
+            }else{
+                alert(c + " là số nhỏ nhất");
+            }
+        }
+    }
+    var a = parseInt(prompt("nhập vào số thứ nhất"));
+    var b = parseInt(prompt("nhập vào số thứ hai"));
+    var c = parseInt(prompt("nhập vào số thứ ba"));
+    numberMin(a,b,c);
+}
+
+function checkNumber () {
+    function number (a) {
+        if (a > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    var a = parseInt(prompt("nhập vào số bạn muốn kiểm tra"));
+    alert(number(a));
+}
+
+function handleArray () {
+    function reverseArray (array) {
+        alert(array.reverse());
+    }
+    var array = [];
+    var number = parseInt(prompt("nhập vào số phần tử của mảng"));
+    for (var i = 0; i < number; i++){
+        array[i] = prompt("phần tử thứ " + (i + 1));
+    }
+    reverseArray(array);
+}
+
+function swapTwoNumber () {
+    function handleTwoNumber (a,b) {
+        let temp = a;
+               a = b;
+               b = temp;
+        alert(a + " " + b);
+    }
+    var a = parseInt(prompt("nhập vào số đầu tiên"));
+    var b = parseInt(prompt("nhập vào số đầu hai"));
+    alert(a + " " + b);
+    handleTwoNumber(a,b)
+}
+
+swapTwoNumber();
+handleArray();
+checkNumber();
+returnNumberMin();
+kiemTraSo();
+tinhGiaiThua();
+tinhDienTichVaChuVi();
+tinhBinhPhuong();
+</script>
+</body>
+</html>
