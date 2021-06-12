@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class Temperature {
+    constructor (do_C) {
+        this.do_C = do_C;
+        }
+    getDo_C () {
+        return this.do_C;
+    }
+    setDo_f (do_C) {
+        this.do_f = 1.8 * do_C + 32;
+        return this.do_f;
+    }
+    setDo_k (do_C) {
+        this.do_k = do_C + 273.15;
+        return this.do_k;
+    }
+}
+let math = new Temperature(30);
+let do_c = math.getDo_C();
+let do_f = math.setDo_f(30);
+let do_k = math.setDo_k(30);
+alert(do_c);
+alert("độ F được chuyển đổi bằng " + do_f + "\n" + "độ K được chuyển đổi bằng " + do_k)
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = lenght;
+            this.width = width;
+        }
+
+        getLenght() {
+            return this.length;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+        getPerimeter () {
+            return (this.width + this.length) * 2;
+        }
+        getAcreage () {
+            return this.length * this.width;
+        }
+        setLenght (lenght) {
+            this.length = lenght;
+            return this.length;
+        }
+        setWidth (width) {
+            this.width = width;
+            return this.width;
+        }
+        setPerimeter (length,width) {
+           return (width + length) * 2
+        }
+        setAcreage (length,width) {
+            return length * width;
+        }
+    }
+
+    let rectangle = new Rectangle(2,4)
+    let width2 = rectangle.getWidth();
+    let lenght2 = rectangle.getLenght();
+    let perimeter = rectangle.getPerimeter();
+    let acreage = rectangle.getAcreage();
+    alert(width2 + " " + lenght2 + " " + perimeter + " " + acreage);
+    let width1 = rectangle.setWidth(4);
+    let lenght1 = rectangle.setLenght(8);
+    let perimeter1 = rectangle.setPerimeter(4,8);
+    let acreage1 = rectangle.setAcreage(4,8);
+    alert(width1 + " " + lenght1 + " " + perimeter1 + " " + acreage1);
+</script>
+</body>
+</html>
